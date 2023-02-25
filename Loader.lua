@@ -3,7 +3,7 @@ local newassert = loadstring(syn.request({Method = "GET", Url = "https://raw.git
 newassert(identifyexecutor() == "Synapse X", "Unsupported Executor")
 
 if getgenv().lolhook ~= nil then
-    getgenv().lolhook:SendNotification("lolhook | Already Running.")
+    getgenv().lolhook:SendNotification(string.format("%s | Already Running.", getgenv().lolhook.cheatname..getgenv().lolhook.domain))
     return
 end
 
