@@ -4899,7 +4899,7 @@ function library:CreateSettingsTab(menu)
         end;
         --
         -- 
-        local main_section = settings:AddSection("Main", 2); do
+        local main_section = settings:AddSection("Main", 1); do
             main_section:AddBind({text = "Open / Close", flag = "togglebind", nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
                 library:SetOpen(not library.open)
             end});
