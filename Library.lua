@@ -4698,7 +4698,7 @@ function library:init()
         self.watermark = {
             objects = {};
             text = {
-                {self.cheatname, true},
+                {self.cheatname..self.domain, true},
                 {localplayer.Name, false},
                 {localplayer.DisplayName, false},
                 {'0 fps', true},
