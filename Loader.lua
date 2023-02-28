@@ -1,6 +1,6 @@
-local newassert = loadstring(syn.request({Method = "GET", Url = "https://raw.githubusercontent.com/alannlol/Functions/main/Assert.lua"}).Body)()
+local Functions = loadstring(syn.request({Method = "GET", Url = "https://raw.githubusercontent.com/alannlol/lolhook.xyz/main/Utility/Functions.lua"}).Body)()
 
-newassert(identifyexecutor() == "Synapse X", "Unsupported Executor")
+Functions.Assert(identifyexecutor() == "Synapse X", "Unsupported Executor")
 
 if getgenv().lolhook ~= nil then
     getgenv().lolhook:SendNotification(string.format("%s | Already Running.", getgenv().lolhook.cheatname..getgenv().lolhook.domain))
