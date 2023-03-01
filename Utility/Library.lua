@@ -4900,8 +4900,6 @@ function library:CreateSettingsTab(menu)
         --
         -- 
         local main_section = settings:AddSection("Main", 1); do
-            main_section:AddToggle({text = "Disable Mouse Movement", flag = "disablemenumovement",});
-
             main_section:AddBind({text = "Open / Close", flag = "togglebind", nomouse = true, noindicator = true, bind = Enum.KeyCode.End, callback = function()
                 library:SetOpen(not library.open)
             end});
