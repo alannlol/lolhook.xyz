@@ -3,7 +3,7 @@
 local startupArgs = ({...})[1] or {}
 
 if getgenv().library ~= nil then
-    getgenv().library:Unload();
+    return;
 end
 
 if not game:IsLoaded() then
