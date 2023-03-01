@@ -945,7 +945,7 @@ function library:init()
     
     function self:SetOpen(bool)
         self.open = bool;
-        if bool and library.flags.disablemenumovement then
+        if bool then
             actionservice:BindAction(
                 'FreezeMovement',
                 function()
@@ -4911,6 +4911,10 @@ function library:CreateSettingsTab(menu)
 
     return settings
 end
+
+local library = loadstring(game:HttpGet"https://raw.githubusercontent.com/alannlol/lolhook.xyz/main/Utility/Library.lua")({cheatname = "lolhook", domain = ".xyz",build = "dev v1.0", gamename = "Bad Business", fileext = ".cfg"})
+library:init()
+local menu = library.NewWindow({size = UDim2.new(0, 450, 0, 500)})
 
 getgenv().library = library
 return library;
