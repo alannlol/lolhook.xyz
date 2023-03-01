@@ -7,8 +7,8 @@ if getgenv().lolhook ~= nil then
     return
 end
 
-if game.PlaceId == 3233893879 then
-    loadstring(syn.request({Method = "GET", Url = "https://raw.githubusercontent.com/alannlol/lolhook.xyz/main/Games/BB.lua"}).Body)()
+if game.PlaceId == 0 then
+    loadstring(syn.request({Method = "GET", Url = "https://raw.githubusercontent.com/alannlol/lolhook.xyz/main/Games/??.lua"}).Body)()
 else
     error("Unsupported game.")
 end
